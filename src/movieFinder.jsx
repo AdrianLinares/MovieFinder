@@ -1,4 +1,5 @@
 import { useState } from "react";
+import image from "./components/glasses.png";
 
 export const MovieFinder = () => {
     const urlBase = import.meta.env.VITE_BASE_URL;
@@ -59,7 +60,10 @@ export const MovieFinder = () => {
 
     return (
         <div className="container">
-            <h1 className="title">Simple Movie Finder</h1>
+            <h1 className="title">
+                <img src={image} />
+                Simple Movie Finder
+            </h1>
 
             <form onSubmit={handleSubmit}>
                 <input
