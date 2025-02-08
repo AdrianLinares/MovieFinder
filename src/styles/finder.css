@@ -1,192 +1,205 @@
-/* Estilos generales */
+/* Estilos generales - Configuración básica de la página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #c4f7c8 0%, #c8e6c9 100%);
+    font-family: Arial, sans-serif; /* Tipo de letra para toda la página */
+    margin: 0; /* Elimina los márgenes externos */
+    padding: 0; /* Elimina los márgenes internos */
+    background: linear-gradient(
+        135deg,
+        #c4f7c8 0%,
+        #c8e6c9 100%
+    ); /* Fondo degradado en tonos verdes */
 }
 
+/* Contenedor principal - Limita el ancho máximo y centra el contenido */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio interno */
 }
 
+/* Estilos del título principal */
 h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2e7d32;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 28px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centra el texto */
+    color: #2e7d32; /* Color verde oscuro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave del texto */
 }
 
+/* Estilos de la imagen del logo en el título */
 .container h1 img {
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
+    margin-right: 10px; /* Espacio a la derecha de la imagen */
+    width: 80px; /* Ancho fijo */
+    height: 80px; /* Alto fijo */
 }
 
+/* Estilos del formulario de búsqueda */
 form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 10px;
+    display: flex; /* Disposición flexible de los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo del formulario */
+    gap: 10px; /* Espacio entre elementos del formulario */
 }
 
+/* Estilos del campo de texto */
 input[type="text"] {
-    width: 300px;
-    padding: 12px;
-    border: 2px solid #81c784;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease;
+    width: 300px; /* Ancho fijo */
+    padding: 12px; /* Espacio interno */
+    border: 2px solid #81c784; /* Borde verde claro */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.9
+    ); /* Fondo blanco semi-transparente */
+    transition: all 0.3s ease; /* Animación suave para cambios */
 }
 
+/* Estilos del campo de texto cuando está seleccionado */
 input[type="text"]:focus {
-    outline: none;
-    border-color: #4caf50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #4caf50; /* Cambia el color del borde */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Añade sombra verde */
 }
 
+/* Estilos de los botones */
 button {
-    padding: 12px 24px;
-    background: linear-gradient(145deg, #4caf50, #388e3c);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
+    padding: 12px 24px; /* Espacio interno */
+    background: linear-gradient(
+        145deg,
+        #4caf50,
+        #388e3c
+    ); /* Fondo degradado verde */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: all 0.3s ease; /* Animación suave */
+    font-weight: bold; /* Texto en negrita */
 }
 
+/* Efectos al pasar el mouse sobre los botones */
 button:hover {
-    background: linear-gradient(145deg, #66bb6a, #43a047);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(
+        145deg,
+        #66bb6a,
+        #43a047
+    ); /* Cambia el degradado */
+    transform: translateY(-2px); /* Eleva ligeramente el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra */
 }
 
+/* Estilos de botones deshabilitados */
 button:disabled {
-    background: #a5d6a7;
-    cursor: not-allowed;
-    transform: none;
+    background: #a5d6a7; /* Fondo más claro */
+    cursor: not-allowed; /* Cursor de no permitido */
+    transform: none; /* Sin elevación */
 }
 
+/* Grid de tarjetas de películas */
 .movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    padding: 20px 0;
+    display: grid; /* Disposición en cuadrícula */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    ); /* Columnas adaptables */
+    gap: 25px; /* Espacio entre tarjetas */
+    padding: 20px 0; /* Espacio superior e inferior */
 }
 
+/* Estilos de las tarjetas de películas */
 .movie-card {
-    background: linear-gradient(to bottom, #ffffff, #f1f8e9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
-    transition: transform 0.3s ease;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #f1f8e9
+    ); /* Fondo degradado suave */
+    padding: 20px; /* Espacio interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15); /* Sombra verde suave */
+    transition: transform 0.3s ease; /* Animación al hover */
 }
 
+/* Efecto al pasar el mouse sobre las tarjetas */
 .movie-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Eleva la tarjeta */
 }
 
+/* Estilos de las imágenes en las tarjetas */
 .movie-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura proporcional */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio debajo */
 }
 
+/* Títulos en las tarjetas */
 .movie-card h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #1b5e20;
+    font-size: 18px; /* Tamaño de fuente */
+    margin-bottom: 8px; /* Espacio debajo */
+    color: #1b5e20; /* Verde oscuro */
 }
 
+/* Subtítulos en las tarjetas */
 .movie-card h4 {
-    color: #388e3c;
-    margin-bottom: 8px;
+    color: #388e3c; /* Verde medio */
+    margin-bottom: 8px; /* Espacio debajo */
 }
 
+/* Texto de descripción en las tarjetas */
 .movie-card p {
-    color: #33691e;
-    line-height: 1.5;
-    font-size: 0.9em;
+    color: #33691e; /* Verde oscuro para mejor legibilidad */
+    line-height: 1.5; /* Espaciado entre líneas */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
 }
 
+/* Indicador de carga */
 .loading {
-    text-align: center;
-    color: #2e7d32;
-    font-weight: bold;
-    margin: 20px 0;
+    text-align: center; /* Centrado */
+    color: #2e7d32; /* Verde */
+    font-weight: bold; /* Negrita */
+    margin: 20px 0; /* Espaciado vertical */
 }
 
+/* Mensajes de error */
 .error-message {
-    text-align: center;
-    color: #c62828;
-    background-color: #ffcdd2;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 20px 0;
+    text-align: center; /* Centrado */
+    color: #c62828; /* Rojo */
+    background-color: #ffcdd2; /* Fondo rojo claro */
+    padding: 10px; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px 0; /* Espaciado vertical */
 }
 
-.pagination-info {
-    text-align: center;
-    margin: 20px 0;
-    color: #2e7d32;
-}
-
-.pagination-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.pagination-buttons button {
-    padding: 8px 16px;
-    background: linear-gradient(145deg, #4caf50, #388e3c);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.pagination-buttons button:disabled {
-    background: #a5d6a7;
-    cursor: not-allowed;
-}
-
-.pagination-buttons button:hover:not(:disabled) {
-    background: linear-gradient(145deg, #66bb6a, #43a047);
-    transform: translateY(-2px);
-}
-
-/* Estilos para móviles */
+/* Estilos para dispositivos móviles */
 @media (max-width: 600px) {
+    /* Ajustes responsive para pantallas pequeñas */
     h1 {
-        font-size: 22px;
+        font-size: 22px; /* Título más pequeño */
     }
 
     input[type="text"] {
-        width: 100%;
+        width: 100%; /* Campo de búsqueda a ancho completo */
     }
 
     form {
-        flex-direction: column;
+        flex-direction: column; /* Elementos en columna */
     }
 
     .movie-list {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        ); /* Tarjetas más pequeñas */
+        gap: 15px; /* Menor espacio entre tarjetas */
     }
 
     .movie-card {
-        padding: 15px;
+        padding: 15px; /* Menor padding en tarjetas */
     }
 
     .movie-card h2 {
-        font-size: 16px;
+        font-size: 16px; /* Títulos más pequeños */
     }
 }
